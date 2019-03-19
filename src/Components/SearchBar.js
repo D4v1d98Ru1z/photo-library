@@ -8,14 +8,14 @@ export default class SearchBar extends Component {
   }
 
   // Change the form state 
-  hangleChange(event) {
+  hangleChange = (event) => {
     this.setState({
       input: event.target.value
     })
   }
 
   // Submit the event
-  handleSubmit(event){
+  handleSubmit = (event) => {
     // disable the native event
     event.preventDefault()
     this.props.handleSubmit(this.state.input)
