@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+import './ImageCard.css'
 
 export default class ImageCard extends Component {
   render() {
     return (
-      <img
-        src={this.props.img.urls.regular}
-        alt={this.props.img.description}
-      />
+      <div className="item">
+        <img
+          src={this.props.img.urls.regular}
+          alt={this.props.img.description}
+        />
+      </div>
     )
   }
 }
