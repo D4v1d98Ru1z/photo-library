@@ -14,11 +14,31 @@ export default class ImageCard extends Component {
   setGridSpan = () => {
     const height = this.picRef.current.clientHeight
     console.log(`Height from setGridSpan ${height}`)
-    const gridSpan = height + 1
-    console.log(`gridSpan from setGridSpan ${gridSpan}`)
-    this.setState({
-      gridSpan
-    })
+    //const gridSpan = height + 1
+    if(height <= 240){
+      this.setState({
+        gridSpan: 1
+      })
+    }
+    else if(height >= 241 || height <= 470) {
+      this.setState({
+        gridSpan: 2
+      })
+    }
+    // else if( height >= 471 || height <= 560 ) {
+    //   this.setState({
+    //     gridSpan: 3
+    //   })
+    // }
+    else {
+      this.setState({
+        gridSpan: 3
+      })
+    }
+    //console.log(`gridSpan from setGridSpan ${gridSpan}`)
+    // this.setState({
+    //   gridSpan
+    // })
   }
 
   componentDidMount(){
