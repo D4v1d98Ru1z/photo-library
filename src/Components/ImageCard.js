@@ -4,17 +4,18 @@ import './ImageCard.css'
 export default class ImageCard extends Component {
   constructor(props) {
     super(props)
+    // init the state for the grid-row-end css
     this.state = {
       gridSpan: 0
     }
+    // Reference for the image
     this.picRef = React.createRef()
   }
-  
-
   setGridSpan = () => {
+    // Getting the height from each image
     const height = this.picRef.current.clientHeight
-    console.log(`Height from setGridSpan ${height}`)
-    //const gridSpan = height + 1
+
+    // Different values according to the height of the images
     if(height <= 240){
       this.setState({
         gridSpan: 1
@@ -25,23 +26,16 @@ export default class ImageCard extends Component {
         gridSpan: 2
       })
     }
-    // else if( height >= 471 || height <= 560 ) {
-    //   this.setState({
-    //     gridSpan: 3
-    //   })
-    // }
     else {
       this.setState({
         gridSpan: 3
       })
     }
-    //console.log(`gridSpan from setGridSpan ${gridSpan}`)
-    // this.setState({
-    //   gridSpan
-    // })
   }
 
+  // Lifecycle method to runs after the component has been rendered
   componentDidMount(){
+    // Add event when the image reference has been loaded
     this.picRef.current.addEventListener('load', this.setGridSpan)
   }
 
