@@ -3,21 +3,24 @@
 }
 
 .SearchBar {
-    padding: 15px 0;
-}
-
-.SearchBar form{
+    padding: 15px;
     max-width: 520px;
-    justify-content: center;
     margin: auto;
 }
 
+.SearchBar form{
+    text-align: center;
+}
+
 .SearchBar form .Search {
-    width: 100%;
+    width: 90%;
     background-color: #EFEFEF;
     color: #3a3b3f;
     font-weight: 800;
     border: none;
     padding: 13px;
     border-radius: 5px;
+}
+.SearchBar form .Search:focus {
+    outline-width: 0;
 }
