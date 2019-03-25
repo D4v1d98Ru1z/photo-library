@@ -53,11 +53,13 @@ export default class ImageCard extends Component {
           />
           <div className="post-overlay">
             <p>
+              <i className="far fa-heart"></i>
               <span>
                 {
                   this.props.img.user.total_likes
                 }
               </span>
+              <i className="far fa-images"></i>
               <span>
                 {
                   this.props.img.user.total_photos
