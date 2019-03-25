@@ -53,7 +53,7 @@ export default class ImageCard extends Component {
           />
           <div className="post-overlay">
             <p>
-              <span className="overlay-btn">
+              <span className="overlay-btn btn-1">
                 <i className="far fa-heart"></i>
                 <span>
                   {
@@ -61,7 +61,7 @@ export default class ImageCard extends Component {
                   }
                 </span>
               </span>
-              <span className="overlay-btn">
+              <span className="overlay-btn btn-2">
                 <i className="far fa-images"></i>
                 <span>
                   {

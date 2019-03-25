@@ -32,7 +32,7 @@
     top: 0;
     bottom: 0;
     display: none;
-    align-items: center;
+    align-items: top;
     justify-content: center;
     color: white;
     border-radius: 8px;
@@ -41,13 +41,21 @@
     display: flex;
 }
 .post-overlay p .overlay-btn {
-    width: 80px;
-    margin: 5px;
+    width: 70px;
+    margin: 5px 2px 0 2px;
     text-align: center;
     display: inline-block;
     font-weight: bold;
+    padding: 0.56em 0.7em;
+    border-radius: 5px;
 }
 
 .post-overlay p .overlay-btn span {
     margin-left: 10px;
+}
+.post-overlay p .btn-1 {
+    background-color: #DE350B;
+}
+.post-overlay p .btn-2 {
+    background-color: #172B4D;
 }
