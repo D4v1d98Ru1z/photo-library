@@ -48,6 +48,7 @@
     font-weight: bold;
     padding: 0.56em 0.7em;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .post-overlay p .overlay-btn span {
@@ -56,6 +57,13 @@
 .post-overlay p .btn-1 {
     background-color: #DE350B;
 }
+.post-overlay p .btn-1:hover {
+    background-color: #BF2600;
+}
+
 .post-overlay p .btn-2 {
     background-color: #172B4D;
+}
+.post-overlay p .btn-2:hover {
+    background-color: #091E42;
 }
