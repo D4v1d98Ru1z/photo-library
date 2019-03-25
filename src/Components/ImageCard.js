@@ -53,17 +53,21 @@ export default class ImageCard extends Component {
           />
           <div className="post-overlay">
             <p>
-              <i className="far fa-heart"></i>
-              <span>
-                {
-                  this.props.img.user.total_likes
-                }
+              <span className="overlay-btn">
+                <i className="far fa-heart"></i>
+                <span>
+                  {
+                    this.props.img.user.total_likes
+                  }
+                </span>
               </span>
-              <i className="far fa-images"></i>
-              <span>
-                {
-                  this.props.img.user.total_photos
-                }
+              <span className="overlay-btn">
+                <i className="far fa-images"></i>
+                <span>
+                  {
+                    this.props.img.user.total_photos
+                  }
+                </span>
               </span>
             </p>
           </div>
@@ -71,7 +75,7 @@ export default class ImageCard extends Component {
         <div className="image-info">
           <img
             src={this.props.img.user.profile_image.small}
-            alt="none"
+            alt={this.props.img.description}
           />
           <p>
             {
