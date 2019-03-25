@@ -1,9 +1,69 @@
 .item {
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     background-color: #f2f2f2;
+    display: block;
+    position: relative;
 }
 .item img {
     max-width: 100%;
     border-radius: 8px;
+}
+
+.item .image-info {
+    display: flex;
+    margin: 15px 0;
+}
+
+.item .image-info  img{
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.item .image-info p {
+    margin: 0;
+    align-self: center;
+}
+.item .post-overlay {
+    background-color: rgba(102, 102, 102, 0.4);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    align-items: top;
+    justify-content: center;
+    color: white;
+    border-radius: 8px;
+}
+.item:hover .post-overlay {
+    display: flex;
+}
+.post-overlay p .overlay-btn {
+    width: 70px;
+    margin: 5px 2px 0 2px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.56em 0.7em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-overlay p .overlay-btn span {
+    margin-left: 10px;
+}
+.post-overlay p .btn-1 {
+    background-color: #DE350B;
+}
+.post-overlay p .btn-1:hover {
+    background-color: #BF2600;
+}
+
+.post-overlay p .btn-2 {
+    background-color: #172B4D;
+}
+.post-overlay p .btn-2:hover {
+    background-color: #091E42;
 }
