@@ -45,11 +45,38 @@ export default class ImageCard extends Component {
         className="item"
         style={{ gridRowEnd: `span ${this.state.gridSpan}` }}
       >
-        <img
-          ref={this.picRef}
-          src={this.props.img.urls.regular}
-          alt={this.props.img.description}
-        />
+        <div className="post">
+          <img
+            ref={this.picRef}
+            src={this.props.img.urls.regular}
+            alt={this.props.img.description}
+          />
+          <div className="post-overlay">
+            <p>
+              <span>
+                {
+                  this.props.img.user.total_likes
+                }
+              </span>
+              <span>
+                {
+                  this.props.img.user.total_photos
+                }
+              </span>
+            </p>
+          </div>
+        </div>
+        <div className="image-info">
+          <img
+            src={this.props.img.user.profile_image.small}
+            alt="none"
+          />
+          <p>
+            {
+              this.props.img.user.name
+            }
+          </p>
+        </div>
       </div>
     )
   }
