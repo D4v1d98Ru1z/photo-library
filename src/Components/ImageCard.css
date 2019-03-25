@@ -12,6 +12,7 @@
 
 .item .image-info {
     display: flex;
+    margin: 15px 0;
 }
 
 .item .image-info  img{
@@ -24,24 +25,29 @@
     align-self: center;
 }
 .item .post-overlay {
-    background-color: rgb(0, 0, 0, .4);
+    background-color: rgba(102, 102, 102, 0.4);
     position: absolute;
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
-    /*display: none;*/
+    display: none;
     align-items: center;
     justify-content: center;
     color: white;
+    border-radius: 8px;
 }
-item:hover .post-overlay {
+.item:hover .post-overlay {
     display: flex;
 }
-.post-overlay p span {
+.post-overlay p .overlay-btn {
     width: 80px;
     margin: 5px;
     text-align: center;
     display: inline-block;
     font-weight: bold;
+}
+
+.post-overlay p .overlay-btn span {
+    margin-left: 10px;
 }
