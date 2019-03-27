@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './SearchBar.css'
+import NavBar from '../Components/NavBar'
 
 export default class SearchBar extends Component {
   // Store the input value
@@ -22,19 +22,11 @@ export default class SearchBar extends Component {
   }
   render() {
     return (
-      <div className="Nav">
-        <nav className="SearchBar">
-            <form onSubmit={this.handleSubmit}>
-                <input 
-                  type="text"
-                  placeholder="Search" 
-                  className="Search"
-                  value={this.state.input}
-                  onChange={this.hangleChange}
-                />
-            </form>
-        </nav>
-      </div>
+      <NavBar
+        handleSubmit={this.handleSubmit}
+        value={this.state.input}
+        hangleChange={this.hangleChange}
+      />
     )
   }
 }
