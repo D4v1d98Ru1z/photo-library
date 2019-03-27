@@ -1,5 +1,5 @@
 import React from 'react'
-import './ImageCard.css'
+import './Info.css'
 
 export default function Info(props) {
   return (

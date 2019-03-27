@@ -10,20 +10,6 @@
     border-radius: 8px;
 }
 
-.item .image-info {
-    display: flex;
-    margin: 15px 0;
-}
-
-.item .image-info  img{
-    height: 100%;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.item .image-info p {
-    margin: 0;
-    align-self: center;
-}
 .item .post-overlay {
     background-color: rgba(102, 102, 102, 0.4);
     position: absolute;
