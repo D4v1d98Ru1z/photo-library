@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageCard from './ImageCard'
+import ImageCard from '../Containers/ImageCard'
 import './GridImage.css'
 
 export default function GridImage(props) {

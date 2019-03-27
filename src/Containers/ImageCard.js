@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import './ImageCard.css'
+import Post from '../Components/Post'
+//import Info from ''
+import '../Components/ImageCard.css'
 
 export default class ImageCard extends Component {
   constructor(props) {
@@ -45,33 +47,11 @@ export default class ImageCard extends Component {
         className="item"
         style={{ gridRowEnd: `span ${this.state.gridSpan}` }}
       >
-        <div className="post">
-          <img
-            ref={this.picRef}
-            src={this.props.img.urls.regular}
-            alt={this.props.img.description}
-          />
-          <div className="post-overlay">
-            <p>
-              <span className="overlay-btn btn-1">
-                <i className="far fa-heart"></i>
-                <span>
-                  {
-                    this.props.img.user.total_likes
-                  }
-                </span>
-              </span>
-              <span className="overlay-btn btn-2">
-                <i className="far fa-images"></i>
-                <span>
-                  {
-                    this.props.img.user.total_photos
-                  }
-                </span>
-              </span>
-            </p>
-          </div>
-        </div>
+        <Post
+          img={this.props.img}
+          picRef={this.picRef}
+        />
+        
         <div className="image-info">
           <img
             src={this.props.img.user.profile_image.small}
