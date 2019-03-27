@@ -1,6 +1,5 @@
 import React from 'react'
 import PostOverlay from './PostOverlay'
-import './ImageCard.css'
 
 export default function Post(props) {
   return (
