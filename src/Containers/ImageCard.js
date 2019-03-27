@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Post from '../Components/Post'
-//import Info from ''
+import Info from '../Components/Info'
 import '../Components/ImageCard.css'
 
 export default class ImageCard extends Component {
@@ -51,18 +51,9 @@ export default class ImageCard extends Component {
           img={this.props.img}
           picRef={this.picRef}
         />
-        
-        <div className="image-info">
-          <img
-            src={this.props.img.user.profile_image.small}
-            alt={this.props.img.description}
-          />
-          <p>
-            {
-              this.props.img.user.name
-            }
-          </p>
-        </div>
+        <Info
+          img={this.props.img}
+        />
       </div>
     )
   }
