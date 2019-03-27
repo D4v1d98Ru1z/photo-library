@@ -16,7 +16,7 @@ The UI has a search input where the user is available to look up any category of
 The first release contains the basics of the app. It means that can search, fetch and show the images from Unsplash.
 
 ### What is next?
-- [ ] Adding info into the cards.
+- [x] Adding info into the cards.
 - [ ] Error layout (not found, server error, etc).
 - [ ] Show the popular images when app is opened.
 
