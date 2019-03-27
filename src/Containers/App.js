@@ -26,7 +26,14 @@ class App extends Component {
       console.log(err)
     }
   }
+
+  async handleLastPost() {
+    let response = await SearchAPI.get('/photos')
+    console.log(response)
+  }
+
   render() {
+    //SearchAPI.get('/photos').then(res => console.log(res))
     return (
       <div>
         <SearchBar
