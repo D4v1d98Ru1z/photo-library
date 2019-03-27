@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './SearchBar'
-import GridImage from './GridImage'
+import GridImage from '../Components/GridImage'
 import SearchAPI from '../api/api'
 
 class App extends Component {

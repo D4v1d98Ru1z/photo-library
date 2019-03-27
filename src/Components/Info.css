@@ -1,0 +1,14 @@
+.image-info {
+    display: flex;
+    margin: 15px 0;
+}
+
+.image-info  img{
+    height: 100%;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.image-info p {
+    margin: 0;
+    align-self: center;
+}
