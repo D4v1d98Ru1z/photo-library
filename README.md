@@ -18,6 +18,7 @@ The first release contains the basics of the app. It means that can search, fetc
 ### What is next?
 - [x] Adding info into the cards.
 - [x] Show the popular images when app is opened.
+- [x] Error Boundaries
 - [ ] Lazy loading.
 - [ ] Error layout (not found, server error, etc).
 
