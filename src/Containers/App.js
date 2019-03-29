@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar'
 import GridImage from '../Components/GridImage'
 import SearchAPI from '../api/api'
+import ErrorBoundary from './ErrorBoundary'
 
 class App extends Component {
   state = {
@@ -48,12 +49,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar
-          handleSubmit={this.handleSubmit}
-        />
-        <GridImage
-          images={this.state.images}
-        />
+        <ErrorBoundary>
+          <SearchBar
+            handleSubmit={this.handleSubmit}
+          />
+          <GridImage
+            images={this.state.images}
+          />
+        </ErrorBoundary>
       </div>
     );
   }
