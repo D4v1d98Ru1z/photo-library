@@ -9,6 +9,11 @@ export default class ErrorBoundary extends Component {
     }
   }
   
+  /**
+   * 
+   * @param {*} error 
+   * @returns {hasError} When the error is true
+   */
   static getDerivedStateFromError(error){
     return {
       hasError: true
