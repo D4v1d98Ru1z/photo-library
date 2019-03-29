@@ -6,7 +6,23 @@ import SearchAPI from '../api/api'
 class App extends Component {
   state = {
     // Store the images
-    images: []
+    images: [],
+  }
+  
+  /**
+   * Lifecycle method to update the state
+   * @returns {data} the recent posts from unsplash
+   * 
+   */   
+  componentDidMount(){
+    // Get the recent posts
+    SearchAPI.get('/photos')
+    .then(response => {
+      // Updating the state asynchronously
+      this.setState({
+        images: response.data
+      })
+    })
   }
 
   // Bring the images by search
@@ -21,19 +37,15 @@ class App extends Component {
       this.setState({
         images: response.data.results 
       })
+      console.log('Last: ',response)
     }
     catch(err){
       console.log(err)
     }
   }
 
-  async handleLastPost() {
-    let response = await SearchAPI.get('/photos')
-    console.log(response)
-  }
 
   render() {
-    //SearchAPI.get('/photos').then(res => console.log(res))
     return (
       <div>
         <SearchBar
